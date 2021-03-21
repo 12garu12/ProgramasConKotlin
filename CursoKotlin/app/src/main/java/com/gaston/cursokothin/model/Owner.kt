@@ -11,9 +11,25 @@ protected: puede ser accedido desde el mismo archivo funciona igual que private 
 
 las clases sin modificador de acceso son por defecto public.
 
+Variables
+//    var --> mutable
+//    val --> inmutable
+
+kotlin genera automaticamente getters y setters es decir no se necesitan
+
 */
 
 class Owner (username:String){
+
+    // Crear variables estaticas
+    companion object{
+        private const val DEFAULT_NAME = "No Name"
+    }
+
+    var username = username
+    var displayName= DEFAULT_NAME
+        get() = field   // para detallar los getter
+        set(value) { field = value}
 
     init {
         //para inicializar las variables.
@@ -21,10 +37,16 @@ class Owner (username:String){
     }
 
     //Segundo constructor
-    constructor(username: String, display: String): this(username){
+    constructor(username: String, displayName: String): this(username){
         // Inicializar variables
+
+        this.displayName = displayName
 
     }
 
+    fun concatenar(a: String, b:String): String{
+        return a + b
+    }
 
 }
+
