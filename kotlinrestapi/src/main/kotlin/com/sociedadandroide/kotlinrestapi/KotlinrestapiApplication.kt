@@ -17,12 +17,12 @@ class KotlinrestapiApplication:CommandLineRunner{
 
     override fun run(vararg args: String?) {
 
-        /*val formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy")
+        val formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy")
         val persona1 = Persona(4567576556, "Gaston", "Saillen", LocalDate.of(1994, 5, 23))
         val persona2 = Persona(4567576556, "John", "Doe", LocalDate.parse("23-08-1999", formatter))
 
         personaRepository!!.save(persona1)
-        personaRepository!!.save(persona2)*/
+        personaRepository!!.save(persona2)
 
 
     }
